@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = Post.order('created_at DESC').limit(10)
-      @comment = Comment.new
-      @comments = Comment.all
+      # @comment = Comment.new
+      # @comments = Comment.all
   end
 
   # create new post

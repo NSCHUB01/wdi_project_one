@@ -4,15 +4,14 @@
        <h3><%= post.title %></h3>
         <article><%= post.description %>
         </article>
-      <% if post.image != nil %>
+      <%# if post.image != nil %>
         <img><%= image_tag post.image %>
         </img>
-      <% else %>
+      <%# else %>
         <img><%= image_tag post.image_file.url %>
         </img>
-    <hr><hr/>
       </div>
-      <% end %>
+      <%# end %>
     <% end %>
   </body>
 
