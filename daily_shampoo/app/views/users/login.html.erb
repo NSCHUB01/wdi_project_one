@@ -1,11 +1,11 @@
 <h3>Log in</h3>
 
 <%= form_tag "sessions" do %>
-
-  <p><%= label_tag :email %><br /></p>
-  <p><%= text_field_tag :email, params[:email] %></p>
-  <p><%= label_tag :password %><br /></p>
-  <p><%= password_field_tag :password %></p>
-
+  <ul>
+    <li><%= label_tag :email %><br /></li>
+    <li><%= text_field_tag :email, params[:email] %></li>
+    <li><%= label_tag :password %><br /></li>
+    <li><%= password_field_tag :password %></li>
+  </ul>
   <div class="actions"><%= submit_tag "Log in" %></div>
 <% end %>

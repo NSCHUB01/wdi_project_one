@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516192456) do
+ActiveRecord::Schema.define(version: 20140521184233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,15 @@ ActiveRecord::Schema.define(version: 20140516192456) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
-    t.datetime "time"
     t.text     "description"
     t.string   "image"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_file_name"
+    t.string   "image_file_content_type"
+    t.integer  "image_file_file_size"
+    t.datetime "image_file_updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -43,6 +46,9 @@ ActiveRecord::Schema.define(version: 20140516192456) do
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
+    t.string   "password_hash"
+    t.string   "password_salt"
   end
 
 end

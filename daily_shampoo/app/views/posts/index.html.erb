@@ -1,4 +1,21 @@
-<h1> Hello! </h1>
+    <body>
+    <div id="posts">
+    <% @posts.each do |post| %>
+       <h3><%= post.title %></h3>
+        <article><%= post.description %>
+        </article>
+      <% if post.image != nil %>
+        <img><%= image_tag post.image %>
+        </img>
+      <% else %>
+        <img><%= image_tag post.image_file.url %>
+        </img>
+    <hr><hr/>
+      </div>
+      <% end %>
+    <% end %>
+  </body>
+
 
 
 
